@@ -20,13 +20,11 @@ upperCaseLetters = map toUpper listLetters
 combinedChar :: [Char]
 combinedChar = map intToDigit listNum ++ listChar ++ listLetters ++ upperCaseLetters
 
--- genera un elemento aleatorio de una lista
 randomElement :: [a] -> IO a 
 randomElement xs = do
     index <- randomRIO(0, length xs - 1)
     return (xs !! index)
 
--- Genera una password aleatorio
 generateRandomPassword :: Int -> IO String
 generateRandomPassword lengthPwd = do
     passwordChars <- mapM (\_ -> randomElement combinedChar) [1..lengthPwd]
