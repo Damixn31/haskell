@@ -25,4 +25,3 @@ El código está dividido en las siguientes partes:
 - `colorPrint`: Función para imprimir texto en un color específico en la consola.
 - `main`: Función principal que genera una contraseña aleatoria y la muestra en la consola.
 
-- 
